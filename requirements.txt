@@ -9,9 +9,9 @@ roma
 ipdb
 pytorch-metric-learning                        
 packaging
-triton
+triton-windows
 timm
-pytest 
+pytest
 chardet 
 yacs 
 termcolor
