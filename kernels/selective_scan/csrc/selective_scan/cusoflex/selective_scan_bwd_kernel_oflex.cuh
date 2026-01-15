@@ -19,6 +19,11 @@
 #include "reverse_scan.cuh"
 #include "static_switch.h"
 
+#ifndef M_LOG2E
+#define M_LOG2E 1.4426950408889634074
+#endif
+
+
 template<int kNThreads_, int kNItems_, bool kIsEvenLen_, bool kDeltaSoftplus_, typename input_t_, typename weight_t_, typename output_t_>
 struct Selective_Scan_bwd_kernel_traits {
     static_assert(kNItems_ % 4 == 0);

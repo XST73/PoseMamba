@@ -214,7 +214,7 @@ def get_pose3D(args, video_path, output_dir):
         model_backbone = model_backbone.cuda()
 
     print('Loading checkpoint', args.evaluate)
-    checkpoint = torch.load(args.evaluate, map_location=lambda storage, loc: storage)
+    checkpoint = torch.load(args.evaluate, map_location=lambda storage, loc: storage, weights_only=False)
     model_backbone.load_state_dict(checkpoint['model_pos'], strict=True)
     model = model_backbone
     model.eval()
